@@ -157,8 +157,8 @@ def run():
                  #time.sleep(4)
                  #pass
             save_image_path = './Uploaded_Resumes/'+ pdf_file.name
-            #with open(save_image_path, "wb") as f:
-            #    f.write(pdf_file.getbuffer())
+            with open(save_image_path, "wb") as f:
+                f.write(pdf_file.getbuffer())
             #print(save_image_path,"badi dur se aaye hai")
             #show_pdf(save_image_path)
             #with open(os.path.join("Uploaded_Resumes",pdf_file.name),"wb") as f:
