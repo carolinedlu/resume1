@@ -397,6 +397,7 @@ def run():
              
                 st.dataframe(df)
                 st.markdown(get_table_download_link(df,'User_Data.csv','Download Report'), unsafe_allow_html=True)
+                
                 ## Admin Side Data
                 query = 'select * from user_data;'
                 plot_data = pd.read_sql(query, connection)
@@ -417,16 +418,16 @@ def run():
                 fig = px.pie(df, values=values, names=labels, title="Pie-Chart📈 for User's 💼 Experienced Level")
                 st.plotly_chart(fig)
 
-                labels = plot_data.resume_score.unique()
-                values = plot_data.resume_score.value_counts()
-                st.subheader("📈 **bar-Chart for User's👨‍💻 Experienced Level**")
-                fig = px.bar(df,x="Resume Score", title="bar-Chart📈 for User's 🎯 Resume Score")
+                #labels = plot_data.resume_score.unique()
+                #values = plot_data.resume_score.value_counts()
+                st.subheader("📈 **Bar-Chart📈 for User's 🎯 Resume Score**")
+                fig = px.bar(df,x="Resume Score", title="Bar-Chart📈 for User's 🎯 Resume Score")
                 st.plotly_chart(fig)
 
-                st.subheader("📈 **bar-Chart for User's👨‍💻 Experienced Level**")
+                st.subheader("📈 **Bar-Chart📈 for User's 🛠️ Skills**")
                 d= to_1D(plot_data["Actual_skills"]).value_counts()
                 d=pd.DataFrame({'skill':d.index, 'count':d.values})
-                fig = px.bar(d,x="skill",y="count",title="bar-Chart📈 for User's 🛠️ Skills")
+                fig = px.bar(d,x="skill",y="count",title="Bar-Chart📈 for User's 🛠️ Skills")
                 st.plotly_chart(fig)
 
                 tab1, tab2, tab3, tab4, tab5,tab6 = st.tabs(["Web Development", "Android Development", "Data Science","IOS Development","UI-UX Development","dummy"])
