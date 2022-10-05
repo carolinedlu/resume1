@@ -10,7 +10,7 @@ from pdfminer3.pdfpage import PDFPage
 from pdfminer3.pdfinterp import PDFResourceManager
 from pdfminer3.pdfinterp import PDFPageInterpreter
 from pdfminer3.converter import TextConverter
-import io,random
+import io,random,os
 from streamlit_tags import st_tags
 #from streamlit.web.cli import main
 from PIL import Image
@@ -161,6 +161,13 @@ def run():
                 f.write(pdf_file.getbuffer())
             print(save_image_path,"badi dur se aaye hai")
             show_pdf(save_image_path)
+            with open(os.path.join("Uploaded_Resumes",pdf_file.name),"wb") as f:
+                f.write(pdf_file.getbuffer())
+            show_pdf(os.path.join("Uploaded_Resumes",pdf_file.name))
+                
+            
+            
+            
             resume_data = ResumeParser(save_image_path).get_extracted_data()
             if resume_data:
                 ## Get the whole resume data
