@@ -16,8 +16,24 @@ from streamlit_tags import st_tags
 from PIL import Image
 import pymysql
 from Courses import ds_course,web_course,android_course,ios_course,uiux_course,resume_videos,interview_videos
-import pafy
+#import pafy
 import plotly.express as px
+
+# From here to 
+import subprocess, sys
+
+def install(package):
+    subprocess.check_call([sys.executable, "-m", "pip", "install", package])
+
+try:
+    import pafy
+
+except Exception as error:
+    print("Error: ", error)
+    install("git+https://github.com/mps-youtube/pafy.git")
+    import pafy
+#here
+#Just to resolve youtube-dl issue on cloud
 
 def fetch_yt_video(link):
     video = pafy.new(link)
