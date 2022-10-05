@@ -10,7 +10,7 @@ ds_course = [['Machine Learning Crash Course by Google [Free]', 'https://develop
              ['Intro to Machine Learning with TensorFlow','https://www.udacity.com/course/intro-to-machine-learning-with-tensorflow-nanodegree--nd230']]
 
 web_course = [['Django Crash course [Free]','https://youtu.be/e1IyzVyrLSU'],
-              [['Full Stack Web Development Course By Devsnest [Free and Best]','https://youtu.be/7TMescjxlrw']]
+              ['Full Stack Web Development Course By Devsnest [Free and Best]','https://youtu.be/7TMescjxlrw'],
               ['Python and Django Full Stack Web Developer Bootcamp','https://www.udemy.com/course/python-and-django-full-stack-web-developer-bootcamp'],
               ['React Crash Course [Free]','https://youtu.be/Dorf8i6lCuk'],
               ['ReactJS Project Development Training','https://www.dotnettricks.com/training/masters-program/reactjs-certification-training'],
