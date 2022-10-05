@@ -74,17 +74,17 @@ def pdf_reader(file):
 def show_pdf(file_path):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    #pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+    #st.markdown(pdf_display, unsafe_allow_html=True)
     
-    pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"/>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    #pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"/>'
+    #st.markdown(pdf_display, unsafe_allow_html=True)
     
-    pdf_display = F'<iframe src="file_path" width="700" height="1000" type="application/pdf"></iframe>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    #pdf_display = F'<iframe src="file_path" width="700" height="1000" type="application/pdf"></iframe>'
+    #st.markdown(pdf_display, unsafe_allow_html=True)
     
-    pdf_display = f'<embed src="file_path" width="700" height="1000" type="application/pdf"/>'
-    st.markdown(pdf_display, unsafe_allow_html=True)
+    #pdf_display = f'<embed src="file_path" width="700" height="1000" type="application/pdf"/>'
+    #st.markdown(pdf_display, unsafe_allow_html=True)
     
 
 def course_recommender(course_list):
@@ -161,10 +161,10 @@ def run():
             #    f.write(pdf_file.getbuffer())
             #print(save_image_path,"badi dur se aaye hai")
             #show_pdf(save_image_path)
-            with open(os.path.join("Uploaded_Resumes",pdf_file.name),"wb") as f:
-                f.write(pdf_file.getbuffer())
-            show_pdf(os.path.join("Uploaded_Resumes",pdf_file.name))
-            show_pdf('os.path.join("Uploaded_Resumes",pdf_file.name)')
+            #with open(os.path.join("Uploaded_Resumes",pdf_file.name),"wb") as f:
+            #    f.write(pdf_file.getbuffer())
+            #show_pdf(os.path.join("Uploaded_Resumes",pdf_file.name))
+            #show_pdf('os.path.join("Uploaded_Resumes",pdf_file.name)')
                 
             
             
