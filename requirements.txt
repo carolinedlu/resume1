@@ -1,3 +1,4 @@
+nltk
 pdfminer3
 pyresparser
 streamlit
@@ -8,5 +9,5 @@ pymysql
 streamlit-tags
 Pillow
 resume-parser
-https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
+en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-2.3.1/en_core_web_sm-2.3.1.tar.gz
 importlib-metadata==3.2.0
