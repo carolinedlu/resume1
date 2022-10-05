@@ -149,7 +149,8 @@ def run():
             save_image_path = './Uploaded_Resumes/'+ pdf_file.name
             with open(save_image_path, "wb") as f:
                 f.write(pdf_file.getbuffer())
-            show_pdf(save_image_path)
+            #show_pdf(save_image_path)
+            show_pdf(pdf_file)
             resume_data = ResumeParser(save_image_path).get_extracted_data()
             if resume_data:
                 ## Get the whole resume data
