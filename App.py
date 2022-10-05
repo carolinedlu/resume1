@@ -74,7 +74,7 @@ def pdf_reader(file):
 def show_pdf(file_path):
     with open(file_path, "rb") as f:
         base64_pdf = base64.b64encode(f.read()).decode('utf-8')
-    pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf"></iframe>'
+    pdf_display = f'<embed src="data:application/pdf;base64,{base64_pdf}" width="700" height="1000" type="application/pdf">'
     st.markdown(pdf_display, unsafe_allow_html=True)
 
 def course_recommender(course_list):
@@ -527,14 +527,14 @@ def run():
                     #def to_1D(series):
                     #    return pd.Series([x.replace('[','').replace(']','') for _list in series for x in _list.split(", ")])
                     #[x for _list in series for x in _list]
-                    fruit_dict = {}
-                    for i in plot_data["Actual_skills"]:
-                        for j in i.split(", "):
-                            print(i,j)
-                            if j not in fruit_dict:
-                                fruit_dict[j] = 1
-                            else:
-                                fruit_dict[j] += 1
+                    #fruit_dict = {}
+                    #for i in plot_data["Actual_skills"]:
+                    #    for j in i.split(", "):
+                    #        #print(i,j)
+                    #        if j not in fruit_dict:
+                    #            fruit_dict[j] = 1
+                    #        else:
+                    #            fruit_dict[j] += 1
                     #print(fruit_dict)
                     ##d= to_1D(plot_data["Actual_skills"]).value_counts()
                     ##print(d)
