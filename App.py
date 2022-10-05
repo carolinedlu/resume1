@@ -340,7 +340,7 @@ def run():
                 score = 0
                 for percent_complete in range(resume_score):
                     score +=1
-                    time.sleep(0.1)
+                    time.sleep(0.05)
                     my_bar.progress(percent_complete + 1)
                 st.success('**Your Resume Writing Score: ' + str(score)+'**')
                 st.warning("** Note: This score is calculated based on the content that you have added in your Resume. **")
@@ -386,7 +386,7 @@ def run():
         if st.button('Login'):
             if ad_user == 'curiousvishu' and ad_password == 'thankyoudevsnest':
                 st.success("Welcome Vishu")
-                st.snow()
+                
                 # Display Data
                 cursor.execute('''SELECT*FROM user_data''')
                 data = cursor.fetchall()
@@ -394,6 +394,7 @@ def run():
                 df = pd.DataFrame(data, columns=['ID', 'Name', 'Email', 'Resume Score', 'Timestamp', 'Total Page',
                                                  'Predicted Field', 'User Level', 'Actual Skills', 'Recommended Skills',
                                                  'Recommended Course'])
+             
                 st.dataframe(df)
                 st.markdown(get_table_download_link(df,'User_Data.csv','Download Report'), unsafe_allow_html=True)
                 ## Admin Side Data
