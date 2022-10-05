@@ -132,7 +132,7 @@ def run():
                      Page_no VARCHAR(5) NOT NULL,
                      Predicted_Field VARCHAR(25) NOT NULL,
                      User_level VARCHAR(30) NOT NULL,
-                     Actual_skills VARCHAR(300) NOT NULL,
+                     Actual_skills VARCHAR(400) NOT NULL,
                      Recommended_skills VARCHAR(300) NOT NULL,
                      Recommended_courses VARCHAR(600) NOT NULL,
                      PRIMARY KEY (ID));
