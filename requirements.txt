@@ -1,7 +1,7 @@
 nltk
 pdfminer3
 pyresparser
-streamlit
+#streamlit
 pandas
 pafy
 plotly
